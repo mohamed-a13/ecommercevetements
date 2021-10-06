@@ -39,16 +39,18 @@ module.exports.updateUser = async (req, rep) => {
       { _id: req.params.id },
       {
         $set: {
-          pseudo: req.body,
+          pseudo: req.body.pseudo,
         },
       },
       { new: true, upsert: true, setDefaultsOnInsert: true },
       (err, docs) => {
+        console.log('Resultat 1: ' + req.body)
         if (!err) return rep.send(docs);
-      
+        
       }
     );
   } catch (err) {
+    console.log('Resultat 2: ' + req.body)
     return rep.status(500).json({ message: err });
   }
 };

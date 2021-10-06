@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config({path: './config/.env'});
 
 
-mongoose.connect('mongodb+srv://sabbou13:' + process.env.DB_USER_PASS + '@cluster0.zj7pr.mongodb.net/ecommercevetements', {
+mongoose.connect('mongodb+srv://' + process.env.DB_USER_PASS + '@cluster0.zj7pr.mongodb.net/ecommercevetements', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
