@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const UserSchema = new mongoose.Schema({
   pseudo: {
     type: String,
@@ -15,8 +14,8 @@ const UserSchema = new mongoose.Schema({
     required: true
   },
   role: {
-    type: Number,
-    default: 0
+    type: String,
+    default: "user"
   },
   },{ timestamps: true }
 );
