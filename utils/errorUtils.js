@@ -7,7 +7,7 @@ module.exports.signInErrors = (err) => {
     errors.email = "Email ou mot de passe incorrect";
   
   if (err.message.includes('password'))
-    errors.password = "Email ou de mot de passe incorrect"
+    errors.password = "Email ou mot de passe incorrect"
 
   return errors;
 }
